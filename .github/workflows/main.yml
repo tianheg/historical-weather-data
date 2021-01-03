@@ -8,6 +8,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: pwd
+    - name: Run a multi-line script
+      run: |
+        ls
+        git status
     - name: Save current weather condition
       env:
         API_KEY: ${{ secrets.API_KEY }}
