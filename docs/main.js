@@ -28,7 +28,7 @@ function getData() {
     xhr.response
       .split("\n")
       .filter((d) => d)
-      .splice(-30)
+      .splice(-365)
       .forEach((day) => {
         const xhr2 = new XMLHttpRequest();
         xhr2.open("GET", `assets/data/${day}.json`);
